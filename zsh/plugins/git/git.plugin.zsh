@@ -1,7 +1,3 @@
-# Git version checking
-autoload -Uz is-at-least
-git_version="${${(As: :)$(git version 2>/dev/null)}[3]}"
-
 #
 # Functions
 #
@@ -147,9 +143,7 @@ compdef _git gdv=git-diff
 
 alias gf='git fetch'
 # --jobs=<n> was added in git 2.8
-is-at-least 2.8 "$git_version" \
-  && alias gfa='git fetch --all --prune --jobs=10' \
-  || alias gfa='git fetch --all --prune'
+alias gfa='git fetch --all --prune --jobs=10'
 alias gfo='git fetch origin'
 
 alias gfg='git ls-files | grep'
@@ -289,9 +283,7 @@ alias gss='git status -s'
 alias gst='git status'
 
 # use the default stash push on git 2.13 and newer
-is-at-least 2.13 "$git_version" \
-  && alias gsta='git stash push' \
-  || alias gsta='git stash save'
+alias gsta='git stash push'
 
 alias gstaa='git stash apply'
 alias gstc='git stash clear'
@@ -342,4 +334,3 @@ function grename() {
   fi
 }
 
-unset git_version
