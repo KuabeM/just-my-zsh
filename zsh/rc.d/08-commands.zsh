@@ -37,3 +37,24 @@ alias -s {log,out}='tail -F'
 
 # Use `< file` to quickly view the contents of any file.
 READNULLCMD=$PAGER  # Set the program to use for this.
+
+# misc
+alias vim="nvim"
+alias batp="bat --plain"
+alias tt="alacritty&!"
+alias spotify="flatpak run com.spotify.Client"
+
+alias reboot="echo 'Are you sure?' If so, run /sbin/reboot" 
+alias shutdown="echo 'Are you sure?' If so, run /sbin/shutdown"
+
+# sccache
+#export RUSTC_WRAPPER=sccache
+
+# color picker with grim
+alias colorpick='grim -g "$(slurp -p)" -t ppm - | convert - -format "%[pixel:p{0,0}]" txt:-'
+
+# fuzzy search
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# zoxide: smart cd
+eval "$(zoxide init zsh)"

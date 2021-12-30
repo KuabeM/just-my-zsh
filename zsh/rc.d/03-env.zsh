@@ -12,7 +12,10 @@ export -UT INFOPATH infopath  # -T creates a "tied" pair; see below.
 # Modifying one will also modify the other.
 # So, you can add elements to your $PATH (or $FPATH, etc.) like this:
 path=(
-    /home/linuxbrew/.linuxbrew/bin(N)	# (N): null if file doesn't exist
+    $HOME/.cargo/bin(N)
+    $HOME/.local/bin(N)
+    $HOME/.cabal/bin(N)
+    $XDG_CONFIG_HOME/sway/scripts(N)
     $path
 )
 
@@ -25,6 +28,23 @@ fpath=(
 
 # CMake use all cores
 export -U CMAKE_BUILD_PARALLEL_LEVEL=8
+# LSP cmake compile commands
 export -U CMAKE_EXPORT_COMPILE_COMMANDS
+
 export -U GTEST_COLOR=1
+# Editor
 export -U EDITOR=vim
+
+# Gnome ssh agent integration
+#export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+#export $(gnome-keyring-daemon --daemonize --start)
+
+# MC7 configuration
+#export E2_CONFIG=$HOME/repos/mc7/e2.conf
+
+# Cabal and ghcup
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
+
+# Nodejs version manager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

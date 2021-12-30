@@ -25,3 +25,20 @@ setopt GLOB_STAR_SHORT
 
 # Sort numbers numerically, not lexicographically.
 setopt NUMERIC_GLOB_SORT
+
+# Display jobs in long format
+setopt LONG_LIST_JOBS
+
+# Correct commands
+alias cp='nocorrect cp'
+alias ebuild='nocorrect ebuild'
+alias gist='nocorrect gist'
+alias heroku='nocorrect heroku'
+alias hpodder='nocorrect hpodder'
+alias man='nocorrect man'
+alias mkdir='nocorrect mkdir'
+alias mv='nocorrect mv'
+alias mysql='nocorrect mysql'
+alias sudo='nocorrect sudo'
+alias su='nocorrect su'
+setopt correct_all

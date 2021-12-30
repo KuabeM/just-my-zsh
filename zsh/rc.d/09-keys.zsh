@@ -45,22 +45,18 @@ unsetopt FLOW_CONTROL
   autoload -Uz $functions_source[$1]-*~*.zwc  # Exclude .zwc files.
 } run-help
 
-# Alt-Q
+# [Alt-Q]
 # - On the main prompt: Push aside your current command line  so you can type a
 #   new one. The old command line is restored when you press Alt-G or once
 #   you've accepted the new command line.
 # - On the continuation prompt: Return to the main prompt.
 bindkey '^[q' push-line-or-edit
 
-# Alt-V: Show the next key combo's terminal code and state what it does.
+# [Alt-V] Show the next key combo's terminal code and state what it does.
 bindkey '^[v' describe-key-briefly
 
-# Alt-Shift-S: Prefix the current or previous command line with `sudo`.
-() {
-  bindkey '^[S' $1  # Bind Alt-Shift-S to the widget below.
-  zle -N $1         # Create a widget that calls the function below.
-  $1() {            # Create the function.
-    [[ -z $BUFFER ]] && zle .up-history
-    LBUFFER="sudo $LBUFFER"   # Use $LBUFFER to preserve cursor position.
-  }
-} .sudo
+# Edit the current command line in $EDITOR
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey 'C-e' edit-command-line
+
