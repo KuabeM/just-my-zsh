@@ -27,3 +27,12 @@ setopt HIST_IGNORE_ALL_DUPS
 
 # Auto-sync history between concurrent sessions.
 setopt SHARE_HISTORY
+
+# Ignore commands starting with a space
+setopt HIST_IGNORE_SPACE
+
+# show command with history expansion to user before running it
+setopt HIST_VERIFY
+
+# share command history data
+setopt SHARE_HISTORY

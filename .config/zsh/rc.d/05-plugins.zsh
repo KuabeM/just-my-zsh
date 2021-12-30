@@ -11,6 +11,7 @@ plugins=(
   marlonrichert/zcolors               # Colors for completions and Git
   zsh-users/zsh-autosuggestions       # Inline suggestions
   zsh-users/zsh-syntax-highlighting   # Command-line syntax highlighting
+  ael-code/zsh-colored-man-pages     # Colored manpages
 )
 
 # zsh-autocomplete sends *a lot* of characters to your terminal. This is fine
@@ -32,6 +33,9 @@ znap clone $plugins
 for p in $plugins; do
   znap source $p
 done
+
+# manual plugins
+source ${XDG_CONFIG_HOME:=~/.config}/zsh/plugins/git/git.plugin.zsh
 
 unset p plugins
 

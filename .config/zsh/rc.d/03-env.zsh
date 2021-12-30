@@ -22,14 +22,9 @@ fpath=(
     $fpath
 )
 
-if command -v brew > /dev/null; then
-  # `znap eval <name> '<command>'` is like `eval "$( <command> )"` but with
-  # caching and compilation of <command>'s output, making it 10 times faster.
-  znap eval brew-shellenv 'brew shellenv'
 
-  # Add dirs containing completion functions to your $fpath and they will be
-  # picked up automatically when the completion is initialized.
-  # Here, we add it to the end of $fpath, so that we use brew's completions
-  # only for those commands that zsh doesn't already know how to complete.
-  fpath+=( $HOMEBREW_PREFIX/share/zsh/site-functions )
-fi
+# CMake use all cores
+export -U CMAKE_BUILD_PARALLEL_LEVEL=8
+export -U CMAKE_EXPORT_COMPILE_COMMANDS
+export -U GTEST_COLOR=1
+export -U EDITOR=vim
