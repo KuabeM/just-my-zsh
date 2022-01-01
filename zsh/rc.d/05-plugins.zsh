@@ -5,7 +5,7 @@
 # Add the plugins you want to use here.
 # For more info each plugin, visit its repo on github.com/<plugin>
 plugins=(
-  marlonrichert/zsh-autocomplete      # Real-time type-ahead completion
+  #marlonrichert/zsh-autocomplete      # Real-time type-ahead completion
   marlonrichert/zsh-edit              # Better keyboard shortcuts
   marlonrichert/zsh-hist              # Edit history from the command line.
   marlonrichert/zcolors               # Colors for completions and Git

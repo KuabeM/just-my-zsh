@@ -3,7 +3,10 @@
 # This file, .zshrc, is sourced by zsh for each interactive shell session.
 #
 
-gitdir=~/Git  # The dir where you (want to) keep your repos and plugins
+gitdir=~/.zsh-git  # The dir where you (want to) keep your repos and plugins
+
+# path to cache completion results
+ZSH_CACHE_DIR=${XDG_CACHE_HOME:=~/.cache}/zsh/.zshcompcache
 
 # Load all of the files in rc.d that start with <number>- and end in .zsh
 # <-> is an open-ended range. It matches any non-negative integer.

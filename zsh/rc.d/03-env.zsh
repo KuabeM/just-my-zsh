@@ -34,7 +34,7 @@ export PAGER='less -R'
 # CMake use all cores
 export -U CMAKE_BUILD_PARALLEL_LEVEL=8
 # LSP cmake compile commands
-export -U CMAKE_EXPORT_COMPILE_COMMANDS
+export -U CMAKE_EXPORT_COMPILE_COMMANDS=1
 
 export -U GTEST_COLOR=1
 # Editor
