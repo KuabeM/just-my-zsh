@@ -31,8 +31,9 @@ fpath=(
 : ${PAGER:=less -R}
 export PAGER='less -R'
 
-# CMake use all cores
+# CMake/Make use all cores
 export -U CMAKE_BUILD_PARALLEL_LEVEL=8
+export -U MAKEFLAGS='-j 8'
 # LSP cmake compile commands
 export -U CMAKE_EXPORT_COMPILE_COMMANDS=1
 
