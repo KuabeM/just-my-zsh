@@ -45,11 +45,11 @@ export -U GTEST_COLOR=1
 export -U EDITOR=vim
 
 # Gnome ssh agent integration
-#export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-#export $(gnome-keyring-daemon --daemonize --start)
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+export $(gnome-keyring-daemon --daemonize --start)
 
 # MC7 configuration
-#export E2_CONFIG=$HOME/repos/mc7/e2.conf
+export E2_CONFIG=$HOME/repos/mc7/e2.conf
 
 # Cabal and ghcup
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
