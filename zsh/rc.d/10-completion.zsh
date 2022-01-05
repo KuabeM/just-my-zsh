@@ -10,13 +10,13 @@ WORDCHARS=''
 
 unsetopt MENU_COMPLETE   # do not autoselect the first completion entry
 unsetopt FLOWCONTROL
-unsetopt AUTO_MENU         # show completion menu on successive tab press
+setopt AUTO_MENU         # show completion menu on successive tab press
 setopt AUTO_LIST
 setopt COMPLETE_IN_WORD
 setopt ALWAYS_TO_END
 
 # Define the completers: [_extensions: expand * etc] [normal complete] [approximate complete]
-#zstyle ':completion:*' completer _expand_alias _extensions _complete _approximate
+zstyle ':completion:*' completer _expand_alias _extensions _complete _approximate
 #zstyle ':completion:*' completer  _complete _ignored
 # Complete the alias when _expand_alias is used as a function
 #zstyle ':completion:*' complete true

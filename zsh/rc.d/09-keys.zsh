@@ -45,6 +45,9 @@ unsetopt FLOW_CONTROL
   autoload -Uz $functions_source[$1]-*~*.zwc  # Exclude .zwc files.
 } run-help
 
+# Use emacs key bindings
+bindkey -e
+
 # [Alt-Q]
 # - On the main prompt: Push aside your current command line  so you can type a
 #   new one. The old command line is restored when you press Alt-G or once
@@ -84,4 +87,6 @@ zle -N down-line-or-beginning-search
 
 bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
 bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
+
+bindkey "${terminfo[kcbt]}" reverse-menu-complete
 
