@@ -16,9 +16,10 @@ setopt COMPLETE_IN_WORD
 setopt ALWAYS_TO_END
 
 # Define the completers: [_extensions: expand * etc] [normal complete] [approximate complete]
-zstyle ':completion:*' completer _extensions _complete _approximate _list
+#zstyle ':completion:*' completer _expand_alias _extensions _complete _approximate
+#zstyle ':completion:*' completer  _complete _ignored
 # Complete the alias when _expand_alias is used as a function
-zstyle ':completion:*' complete true
+#zstyle ':completion:*' complete true
 
 # Formatting
 zstyle ':completion:*:*:*:*:descriptions' format '%F{green}[%d]%f'
