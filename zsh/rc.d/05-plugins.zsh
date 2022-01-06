@@ -6,8 +6,8 @@
 # For more info each plugin, visit its repo on github.com/<plugin>
 plugins=(
   #marlonrichert/zsh-autocomplete      # Real-time type-ahead completion
-  #marlonrichert/zsh-edit              # Better keyboard shortcuts
-  #marlonrichert/zsh-hist              # Edit history from the command line.
+  marlonrichert/zsh-edit              # Better keyboard shortcuts
+  marlonrichert/zsh-hist              # Edit history from the command line.
   marlonrichert/zcolors               # Colors for completions and Git
   zsh-users/zsh-autosuggestions       # Inline suggestions
   zsh-users/zsh-syntax-highlighting   # Command-line syntax highlighting
@@ -35,10 +35,12 @@ for p in $plugins; do
 done
 
 # manual plugins
-source ${XDG_CONFIG_HOME:=~/.config}/zsh/plugins/git/git.plugin.zsh
+source $gitdir/git/git.plugin.zsh
 
 unset p plugins
 
 # `znap eval <name> '<command>'` is like `eval "$( <command> )"` but with
 # caching and compilation of <command>'s output, making it ~10 times faster.
-znap eval zcolors "zcolors ${(q)LS_COLORS}"  # Extra init code needed for zcolors.
+#znap eval zcolors "zcolors ${(q)LS_COLORS}"  # Extra init code needed for zcolors.
+zcolors ${(q)LS_COLORS} >| $gitdir/zcolors/colors  # Extra init code needed for zcolors.
+source $gitdir/zcolors/colors

@@ -23,6 +23,9 @@ setopt EXTENDED_GLOB
 # https://zsh.sourceforge.io/Doc/Release/Expansion.html#Recursive-Globbing
 setopt GLOB_STAR_SHORT
 
+# case insensitive globbing
+setopt NO_CASE_GLOB
+
 # Sort numbers numerically, not lexicographically.
 setopt NUMERIC_GLOB_SORT
 
