@@ -42,5 +42,5 @@ unset p plugins
 # `znap eval <name> '<command>'` is like `eval "$( <command> )"` but with
 # caching and compilation of <command>'s output, making it ~10 times faster.
 #znap eval zcolors "zcolors ${(q)LS_COLORS}"  # Extra init code needed for zcolors.
-zcolors ${(q)LS_COLORS} >| $gitdir/zcolors/colors  # Extra init code needed for zcolors.
-source $gitdir/zcolors/colors
+#zcolors ${(q)LS_COLORS} >| $gitdir/zcolors/colors  # Extra init code needed for zcolors.
+#source $gitdir/zcolors/colors
