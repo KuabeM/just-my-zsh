@@ -43,4 +43,4 @@ unset p plugins
 # caching and compilation of <command>'s output, making it ~10 times faster.
 #znap eval zcolors "zcolors ${(q)LS_COLORS}"  # Extra init code needed for zcolors.
 #zcolors ${(q)LS_COLORS} >| $gitdir/zcolors/colors  # Extra init code needed for zcolors.
-#source $gitdir/zcolors/colors
+source $gitdir/zcolors/colors
