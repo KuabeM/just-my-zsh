@@ -57,3 +57,6 @@ export E2_CONFIG=$HOME/repos/mc7/e2.conf
 # Nodejs version manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# use wine 32
+export WINEARCH=win32

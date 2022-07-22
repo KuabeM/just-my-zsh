@@ -53,3 +53,25 @@ alias colorpick='grim -g "$(slurp -p)" -t ppm - | convert - -format "%[pixel:p{0
 
 # zoxide: smart cd
 eval "$(zoxide init zsh)"
+
+# robot logging
+function mc-log() {
+    IP=$1
+    LOGFILE=$2
+
+    if [ -z "$IP" ]; then
+        echo "Usage: $0 <ip> [<logfile>]"
+        return
+    fi
+
+    if [ -z  "$LOGFILE" ]; then
+        LOGFILE="/var/log/safety-process-1.log"
+    fi
+
+    while true
+    do
+        ssh -o ConnectTimeout=1 root@$IP tail -n500 -f $LOGFILE
+        sleep 1
+    done
+
+}

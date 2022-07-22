@@ -24,3 +24,5 @@ done
 # startup scripts, but we don't want these leaking to the command line. So,
 # discard them here.
 unset file gitdir
+
+alias luamake=/home/maie_ko/repos/self-build/lua-language-server/3rd/luamake/luamake
