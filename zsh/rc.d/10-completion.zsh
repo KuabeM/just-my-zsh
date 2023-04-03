@@ -62,3 +62,5 @@ zstyle '*' single-ignored show
 
 # automatically load bash completion functions
 autoload -U +X bashcompinit && bashcompinit
+
+source <(stempel completions --shell zsh)
