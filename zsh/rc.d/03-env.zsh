@@ -16,6 +16,9 @@ path=(
     $HOME/.local/bin(N)
     $HOME/.cabal/bin(N)
     $XDG_CONFIG_HOME/sway/scripts(N)
+    $HOME/.local/share/fnm(N)
+    $HOME/repos/robotx/utils/scripts(N)
+    /opt/gcc-arm-none-eabi-9/bin(N)
     $path
 )
 
@@ -48,12 +51,16 @@ export -U EDITOR=vim
 #export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 #export $(gnome-keyring-daemon --daemonize --start)
 
-# MC7 configuration
-#export E2_CONFIG=$HOME/repos/mc7/e2.conf
-
 # Cabal and ghcup
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
 # Nodejs version manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# alternative to nvm
+eval "`fnm env`"
+
+source /opt/ros/galactic/setup.zsh
+
+export CARGO_TARGET_AARCH64_UNKNOWN_LINUX_GNU_LINKER=/opt/aarch64-unknown-linux-gnu-9/bin/aarch64-linux-gnu-gcc
+export CC_aarch64_unknown_linux_gnu=/opt/aarch64-unknown-linux-gnu-9/bin/aarch64-linux-gnu-gcc

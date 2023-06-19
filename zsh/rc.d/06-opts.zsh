@@ -42,6 +42,9 @@ alias man='nocorrect man'
 alias mkdir='nocorrect mkdir'
 alias mv='nocorrect mv'
 alias mysql='nocorrect mysql'
-alias sudo='nocorrect sudo '
+alias sudo='nocorrect sudo	'
 alias su='nocorrect su'
 setopt correct_all
+
+autoload -U select-word-style
+select-word-style bash

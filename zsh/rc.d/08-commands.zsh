@@ -53,3 +53,6 @@ alias colorpick='grim -g "$(slurp -p)" -t ppm - | convert - -format "%[pixel:p{0
 
 # zoxide: smart cd
 eval "$(zoxide init zsh)"
+
+# fix kitty ssh
+alias sssh="kitty +kitten ssh"
