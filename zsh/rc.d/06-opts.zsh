@@ -46,5 +46,6 @@ alias sudo='nocorrect sudo	'
 alias su='nocorrect su'
 setopt correct_all
 
-autoload -U select-word-style
-select-word-style bash
+autoload -Uz select-word-style
+select-word-style normal
+# select-word-style bash

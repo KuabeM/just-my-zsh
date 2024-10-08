@@ -26,6 +26,8 @@ path=(
 fpath=(
     $ZDOTDIR/functions
     $fpath
+    $ZDOTDIR/completions
+    $ZDOTDIR/completions/zsh-completions/src
 )
 
 autoload -U compinit
@@ -54,10 +56,7 @@ export -U EDITOR=vim
 # Cabal and ghcup
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
-# Nodejs version manager
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# alternative to nvm
+# Nodejs version manager, alternative to nvm
 eval "`fnm env`"
 
 source /opt/ros/galactic/setup.zsh

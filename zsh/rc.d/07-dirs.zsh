@@ -29,5 +29,5 @@ alias -g ......='../../../../..'
 # To be safe, use autocd only with paths starting with ~, .. or /
 
 # ls aliases
-alias ll="exa -l --git"
-alias l="exa -lag --git"
+alias ll="eza -l --git"
+alias l="eza -lag --git"

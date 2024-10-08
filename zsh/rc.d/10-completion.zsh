@@ -66,3 +66,5 @@ autoload -U +X bashcompinit && bashcompinit
 source <(stempel completions --shell zsh)
 
 source $gitdir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# eza has been added via fpath

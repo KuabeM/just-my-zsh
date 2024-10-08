@@ -11,7 +11,8 @@ plugins=(
   marlonrichert/zcolors               # Colors for completions and Git
   zsh-users/zsh-autosuggestions       # Inline suggestions
   zsh-users/zsh-syntax-highlighting   # Command-line syntax highlighting
-  ael-code/zsh-colored-man-pages     # Colored manpages
+  ael-code/zsh-colored-man-pages      # Colored manpages
+  zsh-users/zsh-completions           # more completions
 )
 
 # zsh-autocomplete sends *a lot* of characters to your terminal. This is fine

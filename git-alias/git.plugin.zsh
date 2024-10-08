@@ -334,3 +334,5 @@ function grename() {
   fi
 }
 
+alias gcob="git branch | fzf --preview 'git show --color=always {-1}' --bind 'enter:become(git checkout {-1})'"
+

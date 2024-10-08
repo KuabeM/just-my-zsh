@@ -56,3 +56,6 @@ eval "$(zoxide init zsh)"
 
 # fix kitty ssh
 alias sssh="kitty +kitten ssh"
+
+# use erdtree
+alias tree='erd --suppress-size --layout inverted --sort name'
