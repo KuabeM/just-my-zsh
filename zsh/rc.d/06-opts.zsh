@@ -47,5 +47,4 @@ alias su='nocorrect su'
 setopt correct_all
 
 autoload -Uz select-word-style
-select-word-style normal
-# select-word-style bash
+select-word-style bash
