@@ -59,7 +59,5 @@ export -U EDITOR=vim
 # Nodejs version manager, alternative to nvm
 eval "`fnm env`"
 
-source /opt/ros/galactic/setup.zsh
-
 export CARGO_TARGET_AARCH64_UNKNOWN_LINUX_GNU_LINKER=/opt/aarch64-unknown-linux-gnu-9/bin/aarch64-linux-gnu-gcc
 export CC_aarch64_unknown_linux_gnu=/opt/aarch64-unknown-linux-gnu-9/bin/aarch64-linux-gnu-gcc
